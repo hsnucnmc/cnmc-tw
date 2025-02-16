@@ -8,18 +8,6 @@ function toggleSidebar() {
         sidebar.style.left = '-18vw'; //隱藏
     }
 }
-function togglemobileSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebar.style.left != '0px') {
-        console.log("he");
-        sidebar.style.left = '0px'; //顯示
-        document.getElementById("mobilemenuBtn").innerText = "X";
-    } else {
-        console.log("hey");
-        sidebar.style.left = '-100vw'; //隱藏
-        document.getElementById("mobilemenuBtn").innerText = "\u2630";
-    }
-}
 document.addEventListener('DOMContentLoaded', ()=>{
     // const pElements = document.querySelectorAll('.history p');
     // pElements.forEach((p) => {
