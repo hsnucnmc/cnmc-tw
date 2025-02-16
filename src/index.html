@@ -8,11 +8,11 @@
     <title>網管小組at師大附中</title>
 </head>
 
-<body>
+<body class="">
     <script src="index.js"></script>
-    <nav class="list">
+    <nav class="list hidden md:flex">
 
-        <div class="menuclick" id="menuBtn" onclick="toggleSidebar()">☰</div>
+        <div class="menuclick z-0 md:z-9999" id="menuBtn" onclick="toggleSidebar()">☰</div>
         <ul>
             <li><a href="#front">首頁</a></li>
             <li><a href="#intro">簡介</a></li>
@@ -20,7 +20,8 @@
             <li><a href="#class">社課內容</a></li>
             <li><a href="#goal">發展方向</a></li>
         </ul>
-    </nav>
+    </nav> 
+    <div class="z-9999 md:z-0 block md:hidden fixed w-fit p-2 cursor-default top-0 bg-blue-500" id="mobilemenuBtn" onclick="togglemobileSidebar()">☰</div>
     <div class="sidebar" id="sidebar">
         <div class="link">
             <a href="#front">首頁</a>
@@ -31,14 +32,18 @@
             <a href="declaration.html">獨立宣言</a>
         </div>
     </div>
-    <section id="front" class="h">
+    <section id="front" class="h bg-[url(img/light.jpg)] bg-cover">
         <div class="none"></div>
         <div class="first backdrop-blur-lg">
-            <div class="title">
-                <h1>師大附中 </h1><img src="img/334.webp" alt="" class="cnmcimg size-40">
-                <h1>網管小組</h1>
+            <div class="text-black text-center">
+                <h1 class="text-5xl md:text-8xl">師大附中<br class="block md:hidden">網管小組</h1>
             </div>
-            <p class="pb-[5vh] bg-mint-500">原為服務性質社團，隨資通安全管理法規範，失去伺服器存取權，現轉型為學術性質社團，專注培育資通訊人才，發展多元方向。</p>
+            <div class="flex flex-nowrap flex-row items-center justify-evenly">
+                <hr class="hidden md:block w-5/16 h-1 bg-black">
+                <img src="img/334.webp" alt="CNMC club logo" class="m-auto size-15">
+                <hr class="hidden md:block w-5/16 h-1 bg-black">
+            </div>
+            <p class="pb-[5vh] text-word">原為服務性質社團，隨資通安全管理法規範，失去伺服器存取權，現轉型為學術性質社團，專注培育資通訊人才，發展多元方向。</p>
             <a href="#intro">
                 <div class="arrow"></div>
             </a>
@@ -88,36 +93,41 @@
 
             <!-- Scrollable Content with Mouse Drag -->
             <div
-                class="slider flex items-start gap-6 overflow-x-auto scroll-smooth px-4 py-2 no-scrollbar cursor-grab active:cursor-grabbing select-none">
-                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md ">
-                <div class="bg-[url(img/network.jpg)] p-16 rounded-lg mb-2">
-                    <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">硬體與網路組<br>Hardware and Internet Section</h3>
-                </div>
+                class="slider items-start flex gap-6 overflow-x-auto scroll-smooth px-4 py-2 no-scrollbar cursor-grab active:cursor-grabbing select-none">
+                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md mt-0">
+                    <div class="bg-[url(img/network.jpg)] p-16 rounded-lg mb-2">
+                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">
+                            硬體與網路組<br>Hardware and Internet Section</h3>
+                    </div>
                     <p class="claint text-gray-700 text-lg">
                         主要負責維修舊的硬體並拼湊成新的電腦，課程內容包含電腦零組件、週邊設備、各接孔的認識與使用，同時本組也負責維護社辦內的網路連接、防火牆等網路相關設備。</p>
                 </div>
-                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md">
-                    <div class="bg-[url(img/appdevelop.jpg)] p-16 rounded-lg mb-2">
-                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">應用程式與網頁開發組<br>App Development Section</h3>
+                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md mt-0">
+                    <div class="bg-[url(img/appdevelop.jpg)] p-16 rounded-lg mb-2 ">
+                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">應用程式與網頁開發組<br>App
+                            Development Section</h3>
                     </div>
                     <p class="claint text-gray-700 text-lg">
                         主要負責開發應用程式，包含手機版及網頁版，本學期預計推出附中校務app。主要使用Flutter、HTML、CSS、JavaScript等。</p>
                 </div>
-                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md">
+                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md mt-0">
                     <div class="bg-[url(img/ai.jpg)] p-16 rounded-lg mb-2 bg-cover">
-                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">人工智慧組<br>Artificial Intelligence Section</h3>
+                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">
+                            人工智慧組<br>Artificial Intelligence Section</h3>
                     </div>
                     <p class="claint text-gray-700">結合理論與實做的課程。</p>
                 </div>
-                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md">
+                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md mt-0">
                     <div class="bg-[url(img/cybersecurity.jpg)] p-16 rounded-lg mb-2 bg-cover">
-                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">資訊安全組<br>Cybersecurity Section</h3>
+                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">
+                            資訊安全組<br>Cybersecurity Section</h3>
                     </div>
                     <p class="claint text-gray-700">是不是擔心被Rickroll，趕快加入資安組，保證讓你變得很電。</p>
                 </div>
-                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md">
+                <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md mt-0">
                     <div class="bg-[url(img/cp.jpg)] p-16 rounded-lg mb-2 bg-cover">
-                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">競賽程式組<br>Competition Programming Section</h3>
+                        <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">
+                            競賽程式組<br>Competition Programming Section</h3>
                     </div>
                     <p class="claint text-gray-700">我們最厲害的演算法組，預計將複雜的演算法以淺顯易懂的方式視覺化的表示出來，敬請期待。</p>
                 </div>

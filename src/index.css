@@ -165,17 +165,9 @@ body {
     text-align: center;
 }
 
-.title h1 {
-    font-size: 5vw;
-    margin: auto;
-    color: black;
-}
-
 .first p {
     margin: auto;
     width: 60vw;
-    font-size: 2vw;
-    color: var(--word);
 }
 
 .h {
@@ -183,7 +175,6 @@ body {
 }
 
 #front {
-    background-image: url("img/light.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -191,14 +182,7 @@ body {
     justify-content: center;
 }
 
-.title {
-    margin: 0;
-    display: flex;
-}
 
-.cnmcimg {
-    margin: 0;
-}
 
 .first {
     margin: auto;
@@ -355,7 +339,6 @@ div.arrow {
 
 .menuclick {
 
-    z-index: 9999;
     padding: 0.75rem 1rem;
 }
 
@@ -366,7 +349,6 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex;
     flex-wrap: nowrap;
     max-height: 8vh;
 }
@@ -509,9 +491,7 @@ nav ul li a.active {
 .g {
     width: 30vw;
     /* height: ; */
-    border-radius: 10%;
     background-color: #A7E6FF;
-    margin: auto;
     text-align: center;
 }
 
@@ -568,10 +548,6 @@ nav ul li a.active {
         background-color: lightblue;
     }
 
-    .list {
-        display: none;
-    }
-
     .sidebar {
         --background: #87ceeb;
         --border: #2388b0;
@@ -582,9 +558,11 @@ nav ul li a.active {
         top: 0;
         z-index: 1001;
         height: 100%;
-        left: 0px;
+        left: -100vw;
     }
-
+    .link{
+        width: 100vw;
+    }
     #intro {
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -616,18 +594,10 @@ nav ul li a.active {
         padding: 0vw;
     }
 
-    .cnmcimg {
-        width: 20vw;
-        height: auto;
-    }
-
     .first {
         width: 90vw;
     }
 
-    .first h1 {
-        font-size: 15vw;
-    }
 
     .first h2 {
         font-size: 5vw;

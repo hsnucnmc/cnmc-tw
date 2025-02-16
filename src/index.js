@@ -1,12 +1,26 @@
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     if (sidebar.style.left != '0px') {
+        console.log("she");
         sidebar.style.left = '0px'; //顯示
     } else {
+        console.log("wrong");
         sidebar.style.left = '-18vw';//隱藏
     }
 }
-
+function togglemobileSidebar(){
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar.style.left != '0px') {
+        console.log("he");
+        sidebar.style.left = '0px'; //顯示
+        document.getElementById("mobilemenuBtn").innerText = "X";
+    } else {
+        console.log("hey");
+        sidebar.style.left = '-100vw';//隱藏
+        document.getElementById("mobilemenuBtn").innerText = "☰";
+    }
+    
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // const pElements = document.querySelectorAll('.history p');
@@ -30,8 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to close the menu if clicked outside
     document.addEventListener("click", (e) => {
         // Check if the clicked element is not the menu or button
-        if (!sidebar.contains(e.target) && e.target !== document.getElementById("menuBtn")) {
+        if (sidebar.style.left != '-100vw' && !sidebar.contains(e.target) && e.target !== document.getElementById("menuBtn") && e.target !== document.getElementById("mobilemenuBtn")) {
+            if(window.screen.width >= 768){
+                sidebar.style.left = '-100vw';
+            }else{
             sidebar.style.left = '-18vw';
+            }
         }
     });
 });
