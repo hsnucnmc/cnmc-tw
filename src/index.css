@@ -1,0 +1,673 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bg: #C6E7FF;
+    --color-border: #D4F6FF;
+    --color-word: #00274D;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --background: #87ceeb;
+    /**/
+    --border: #2388b0;
+    --word: #00274D;
+    /**/
+}
+
+body {
+    margin: 0;
+    /* border: #be3144 solid 10px; */
+}
+
+.link {
+    padding-top: 8vh;
+    background-color: var(--word);
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    padding-bottom: 5rem;
+    border: 0rem var(--border) solid;
+    border-left: 0px;
+    /* border-radius: 1rem;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; */
+    z-index: 9997;
+}
+
+.link a {
+    color: aliceblue;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+    padding-top: 0.5rem;
+
+    padding-right: 2vw;
+    padding-left: 1vw;
+    /* padding-bottom: 0.5rem; */
+    background-color: transparent;
+    z-index: 9998;
+}
+
+.link a:hover {
+    background-color: #2388b0;
+    z-index: 9998;
+}
+
+.three_lines {
+    padding: 3vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: var(--background);
+    color: #ffffff;
+    position: fixed;
+    border: none;
+    font-size: 100%;
+    border-radius: 20px;
+    z-index: 9999;
+    top: 0;
+    border: var(--border);
+}
+
+.three_lines:hover {
+    background-color: #87cfebc8;
+    /* Change background color when hovered */
+}
+
+.sidebar {
+    display: flex;
+    position: fixed;
+    transition: left 1.25s ease-in-out;
+    /* 使用 transition 来平滑过渡 */
+    left: -18vw;
+    top: 0;
+    z-index: 1001;
+    height: 100%;
+}
+
+.peoplesocialicon ul li {
+    list-style: none;
+    margin: 0 0.75rem;
+}
+
+.peoplesocialicon ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.intur a {
+    color: rgb(88, 88, 88);
+}
+
+.peoplesocialicon ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0.25rem 0;
+    align-items: center;
+    padding: 0;
+    padding-left: 1.5rem;
+}
+
+.peoplesocialicon {
+    margin-top: 1rem;
+    border: #4d0c00 0.1rem solid;
+
+    border-radius: 3rem;
+}
+
+.peopleintrotitle {
+
+    min-height: 80vh;
+    text-align: center;
+    margin: auto;
+}
+
+.peopleintrobg {
+    height: 80vh;
+    background-image: url("img/allotgetherphoto.jpg");
+    background-size: cover;
+
+    filter: blur(5px);
+}
+
+.peopleintrobox {
+    border: 0.5rem aliceblue solid;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    min-width: 50%;
+    min-height: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+}
+
+.peopleintrobox h1 {
+    color: aliceblue;
+    font-size: 3rem;
+
+}
+
+.peopleintrooutbox {
+    z-index: 100;
+    background: transparent;
+}
+
+.first {
+    width: 60vw;
+    height: auto;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 5vw;
+    margin: auto;
+    color: black;
+}
+
+.first p {
+    margin: auto;
+    width: 60vw;
+    font-size: 2vw;
+    color: var(--word);
+}
+
+.h {
+    height: 100vh;
+}
+
+#front {
+    background-image: url("img/light.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin: 0;
+    display: flex;
+}
+
+.cnmcimg {
+    margin: 0;
+}
+
+.first {
+    margin: auto;
+
+}
+
+.int {
+    padding-bottom: 5vh;
+}
+
+.none {
+    margin: 0;
+    height: 15vh;
+    width: 100vw;
+}
+
+.none2 {
+    margin: 0;
+    height: 5vh;
+    width: 100vw;
+}
+
+.down {
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    height: 10vh;
+    width: 50vw;
+    margin: auto;
+    display: block;
+    background-color: white;
+}
+
+
+div.arrow {
+    width: 6vmin;
+    height: 6vmin;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+    transform: rotate(135deg);
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-width: .8vmin .8vmin 0 0;
+        border-style: solid;
+        border-color: #fafafa;
+        transition: .2s ease;
+        display: block;
+        transform-origin: 100% 0;
+    }
+
+
+    &:after {
+        content: '';
+        float: left;
+        position: relative;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        border-width: 0 .8vmin 0 0;
+        border-style: solid;
+        border-color: #fafafa;
+        transform-origin: 100% 0;
+        transition: .2s ease;
+    }
+
+    &:hover::after {
+        transform: rotate(45deg);
+        border-color: #8dc4e2;
+        height: 120%;
+    }
+
+    &:hover::before {
+        border-color: #8dc4e2;
+        transform: scale(.8);
+
+    }
+
+}
+
+
+.page {
+    background-color: var(--color-bg);
+    padding: 15vh;
+}
+
+.history p {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 1vh;
+}
+
+.history p.dimmed {
+    opacity: 0.3;
+    /* 讓其他文字變暗 */
+}
+
+.history p:hover {
+    opacity: 1;
+    /* 鼠標懸停的文字保持不變 */
+}
+
+.history {
+    margin-left: 5vw;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.histi {
+    font-size: 5vh;
+    margin: 0;
+    color: var(--word);
+}
+
+.line {
+    margin: 0;
+    padding: 0;
+    border: var(--border) solid;
+    margin-bottom: 3vh;
+}
+
+.leader {
+    margin: 0;
+    padding-bottom: 1vh;
+    color: var(--word);
+    font-size: 3vh;
+    margin-right: auto;
+
+}
+
+.intur h1 {
+    font-size: 10vh;
+    margin-bottom: 0%;
+}
+
+.leim {
+    height: 70vh;
+    width: auto;
+}
+
+.left {
+    margin-left: auto;
+}
+
+.right {
+    margin-right: auto;
+}
+
+.menuclick {
+
+    z-index: 9999;
+    padding: 0.75rem 1rem;
+}
+
+nav {
+    color: aliceblue;
+    background-color: #00274D;
+    cursor: default;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 8vh;
+}
+
+nav ul {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0.75rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a.active {
+    color: #FFD700;
+    /* Change text color */
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+    /* Glow effect */
+    font-weight: bold;
+}
+
+/* from https://codehim.com/html5-css3/html-css-image-comparison-slider/ */
+.c-compare {
+    --h: 9;
+    --m: 0.2rem 0;
+    --w: 16;
+    --thumb-bgc: var(--border);
+    --thumb-bgc-focus: transparent;
+    --thumb-w: 1rem;
+    max-width: 60vw;
+    border-radius: 1rem;
+    margin: var(--m);
+    margin: auto;
+    position: relative;
+}
+
+.c-compare::after {
+    content: "";
+    display: block;
+    padding-bottom: calc((var(--h) / var(--w)) * 100%);
+}
+
+.c-compare__left,
+.c-compare__right {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.c-compare__left {
+    clip-path: polygon(0% 0%, var(--value) 0%, var(--value) 100%, 0% 100%);
+}
+
+.c-compare__right {
+    clip-path: polygon(100% 0%, var(--value) 0%, var(--value) 100%, 100% 100%);
+}
+
+.c-compare__range {
+    background-color: transparent;
+    box-sizing: block;
+    font-family: inherit;
+    height: 100%;
+    margin: 0;
+    outline: none;
+    position: absolute;
+    border: 0px transparent none;
+    top: 0;
+    width: 100%;
+}
+
+.c-compare__range::-moz-range-thumb {
+    background-color:transparent; /*var(--thumb-bgc-focus);*/
+    cursor: ew-resize;
+    height: 100%;
+    width: var(--thumb-w);
+}
+
+.c-compare__range::-webkit-slider-thumb {
+    background-color:transparent; /*var(--thumb-bgc-focus);*/
+    cursor: ew-resize;
+    height: 100%;
+    width: var(--thumb-w);
+}
+
+.c-compare__range:focus::-webkit-slider-thumb {
+    background-color:transparent; /*var(--thumb-bgc-focus);*/
+    box-shadow: 0 0 0 3px transparent; /*var(--thumb-bgc);*/
+}
+
+.c-compare__range:focus::-moz-range-thumb {
+    background-color:transparent; /*var(--thumb-bgc-focus);*/
+    box-shadow: 0 0 0 3px transparent; /*var(--thumb-bgc);*/
+}
+
+.c-compare__range::-moz-range-track {
+    background: transparent;
+    background-size: 100%;
+    box-sizing: border-box;
+}
+
+.c-compare__range::-webkit-slider-runnable-track {
+    background: transparent;
+    background-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.c-compare__range,
+.c-compare__range::-webkit-slider-runnable-track,
+.c-compare__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.c-compare img {
+    border-radius: 1rem;
+}
+
+
+
+.clti {
+    color: var(--word);
+}
+
+
+.g {
+    width: 30vw;
+    /* height: ; */
+    border-radius: 10%;
+    background-color: #A7E6FF;
+    margin: auto;
+    text-align: center;
+}
+
+.claint {
+    color: var(--word);
+    font-weight: 600;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+#intro {
+    display: flex;
+}
+
+.m {
+    height: 100%;
+    width: 100%;
+}
+
+.cll {
+    margin: auto;
+    text-align: center;
+}
+
+.sky {
+    width: 30vw;
+    border-radius: 5vw;
+}
+
+.goalll {
+    margin-left: 15vw;
+    width: 60vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .sidebar {
+        --background: #87ceeb;
+        --border: #2388b0;
+        --word: #00274D;
+        display: flex;
+        position: fixed;
+        transition: left 1.25s ease-in-out;
+        top: 0;
+        z-index: 1001;
+        height: 100%;
+        left: 0px;
+    }
+
+    #intro {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    #history {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .flex {
+        display: block;
+    }
+
+    .introd {
+        height: auto;
+    }
+
+    .m {
+        height: auto;
+    }
+
+    .g {
+        height: auto;
+        width: 90%;
+    }
+
+    .page {
+        padding: 0vw;
+    }
+
+    .cnmcimg {
+        width: 20vw;
+        height: auto;
+    }
+
+    .first {
+        width: 90vw;
+    }
+
+    .first h1 {
+        font-size: 15vw;
+    }
+
+    .first h2 {
+        font-size: 5vw;
+    }
+
+    .shhe {
+        height: 60vw;
+        width: auto;
+        margin: auto;
+    }
+
+    .his {
+        height: 90vw;
+        width: auto;
+        margin-right: 0%;
+        margin-left: auto;
+    }
+
+    .history p {
+        padding-bottom: 0;
+    }
+
+    .line {
+        margin-bottom: 0%;
+    }
+
+    .sky {
+        width: 60vw;
+    }
+
+    .goalll {
+        font-size: 3vh;
+        margin: 0;
+        width: 90vw;
+    }
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
