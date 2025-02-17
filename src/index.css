@@ -80,7 +80,7 @@ body {
 .sidebar {
     display: flex;
     position: fixed;
-    transition: left 1.25s ease-in-out;
+    transition: left 0.75s ease-in-out;
     /* 使用 transition 来平滑过渡 */
     left: -18vw;
     top: 0;
@@ -512,7 +512,7 @@ nav ul li a.active {
         --word: #00274D;
         display: flex;
         position: fixed;
-        transition: left 1.25s ease-in-out;
+        transition: left 0.75 ease-in-out;
         top: 0;
         z-index: 1001;
         height: 100%;
