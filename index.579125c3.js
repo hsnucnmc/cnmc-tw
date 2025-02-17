@@ -1,21 +1,14 @@
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
-    if (sidebar.style.left != '0px') {
-        console.log("she");
-        sidebar.style.left = '0px'; //顯示
-    } else {
-        console.log("wrong");
-        sidebar.style.left = '-18vw'; //隱藏
-    }
+    if (sidebar.style.left != '0px') sidebar.style.left = '0px'; //顯示
+    else sidebar.style.left = '-18vw'; //隱藏
 }
 function togglemobileSidebar() {
     const sidebar = document.querySelector('.sidebar');
     if (sidebar.style.left != '0px') {
-        console.log("he");
         sidebar.style.left = '0px'; //顯示
-        document.getElementById("mobilemenuBtn").innerText = "X";
+        document.getElementById("mobilemenuBtn").innerText = "x";
     } else {
-        console.log("hey");
         sidebar.style.left = '-100vw'; //隱藏
         document.getElementById("mobilemenuBtn").innerText = "\u2630";
     }
