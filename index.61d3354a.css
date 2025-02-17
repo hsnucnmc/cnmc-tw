@@ -737,12 +737,16 @@
     height: calc(var(--spacing) * 1);
   }
 
+  .h-\[15vh\] {
+    height: 15vh;
+  }
+
   .h-\[70vh\] {
     height: 70vh;
   }
 
-  .h-\[70vw\] {
-    height: 70vw;
+  .h-full {
+    height: 100%;
   }
 
   .w-5 {
@@ -755,6 +759,10 @@
 
   .w-\[30vw\] {
     width: 30vw;
+  }
+
+  .w-\[70vw\] {
+    width: 70vw;
   }
 
   .w-fit {
@@ -839,8 +847,8 @@
     scroll-behavior: smooth;
   }
 
-  .rounded-\[5vw\] {
-    border-radius: 5vw;
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
 
   .rounded-full {
@@ -863,6 +871,10 @@
 
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+
+  .bg-bg {
+    background-color: var(--color-bg);
   }
 
   .bg-black {
@@ -917,6 +929,10 @@
     background-size: cover;
   }
 
+  .object-cover {
+    object-fit: cover;
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -939,6 +955,10 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-\[5vh\] {
+    padding-block: 5vh;
   }
 
   .pb-\[5vh\] {
@@ -1127,10 +1147,34 @@
     }
   }
 
+  .md\:h-auto {
+    @media (width >= 48rem) {
+      & {
+        height: auto;
+      }
+    }
+  }
+
   .md\:h-full {
     @media (width >= 48rem) {
       & {
         height: 100%;
+      }
+    }
+  }
+
+  .md\:h-screen {
+    @media (width >= 48rem) {
+      & {
+        height: 100vh;
+      }
+    }
+  }
+
+  .md\:w-\[30vw\] {
+    @media (width >= 48rem) {
+      & {
+        width: 30vw;
       }
     }
   }
@@ -1155,6 +1199,14 @@
     @media (width >= 48rem) {
       & {
         padding: calc(var(--spacing) * 0);
+      }
+    }
+  }
+
+  .md\:px-\[5vw\] {
+    @media (width >= 48rem) {
+      & {
+        padding-inline: 5vw;
       }
     }
   }
@@ -1407,11 +1459,6 @@ div.arrow {
   }
 }
 
-.page {
-  background-color: var(--color-bg);
-  padding: 15vh;
-}
-
 .history p {
   text-align: left;
   margin: 0;
@@ -1628,11 +1675,6 @@ nav ul li a.active {
   height: 100%;
 }
 
-.sky {
-  border-radius: 5vw;
-  width: 30vw;
-}
-
 .goalll {
   width: 60vw;
   margin-left: 15vw;
@@ -1677,10 +1719,6 @@ nav ul li a.active {
     height: auto;
   }
 
-  .page {
-    padding: 0;
-  }
-
   .first {
     width: 90vw;
   }
@@ -1708,10 +1746,6 @@ nav ul li a.active {
 
   .line {
     margin-bottom: 0%;
-  }
-
-  .sky {
-    width: 60vw;
   }
 
   .goalll {
