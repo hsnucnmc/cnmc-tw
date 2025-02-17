@@ -20,6 +20,8 @@ function togglemobileSidebar() {
         document.getElementById("mobilemenuBtn").innerText = "\u2630";
     }
 }
+window.toggleSidebar = toggleSidebar;
+window.togglemobileSidebar = togglemobileSidebar;
 document.addEventListener('DOMContentLoaded', ()=>{
     // const pElements = document.querySelectorAll('.history p');
     // pElements.forEach((p) => {
