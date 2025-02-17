@@ -21,7 +21,8 @@ function togglemobileSidebar(){
     }
     
 }
-
+window.toggleSidebar = toggleSidebar;
+window.togglemobileSidebar = togglemobileSidebar;
 document.addEventListener('DOMContentLoaded', () => {
     // const pElements = document.querySelectorAll('.history p');
 

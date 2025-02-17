@@ -671,6 +671,14 @@
     margin: auto;
   }
 
+  .mx-0 {
+    margin-inline: calc(var(--spacing) * 0);
+  }
+
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
@@ -681,6 +689,10 @@
 
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
 
   .ml-auto {
@@ -725,6 +737,22 @@
     height: calc(var(--spacing) * 1);
   }
 
+  .h-\[15vh\] {
+    height: 15vh;
+  }
+
+  .h-\[70vh\] {
+    height: 70vh;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+
   .w-5\/16 {
     width: 31.25%;
   }
@@ -733,8 +761,8 @@
     width: 30vw;
   }
 
-  .w-\[45vw\] {
-    width: 45vw;
+  .w-\[70vw\] {
+    width: 70vw;
   }
 
   .w-fit {
@@ -819,8 +847,8 @@
     scroll-behavior: smooth;
   }
 
-  .rounded-\[5vw\] {
-    border-radius: 5vw;
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
 
   .rounded-full {
@@ -843,6 +871,10 @@
 
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+
+  .bg-bg {
+    background-color: var(--color-bg);
   }
 
   .bg-black {
@@ -897,8 +929,16 @@
     background-size: cover;
   }
 
+  .object-cover {
+    object-fit: cover;
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
 
   .p-6 {
@@ -915,6 +955,10 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-\[5vh\] {
+    padding-block: 5vh;
   }
 
   .pb-\[5vh\] {
@@ -1055,6 +1099,30 @@
     }
   }
 
+  .md\:m-0 {
+    @media (width >= 48rem) {
+      & {
+        margin: calc(var(--spacing) * 0);
+      }
+    }
+  }
+
+  .md\:ml-5 {
+    @media (width >= 48rem) {
+      & {
+        margin-left: calc(var(--spacing) * 5);
+      }
+    }
+  }
+
+  .md\:ml-auto {
+    @media (width >= 48rem) {
+      & {
+        margin-left: auto;
+      }
+    }
+  }
+
   .md\:block {
     @media (width >= 48rem) {
       & {
@@ -1075,6 +1143,78 @@
     @media (width >= 48rem) {
       & {
         display: none;
+      }
+    }
+  }
+
+  .md\:h-auto {
+    @media (width >= 48rem) {
+      & {
+        height: auto;
+      }
+    }
+  }
+
+  .md\:h-full {
+    @media (width >= 48rem) {
+      & {
+        height: 100%;
+      }
+    }
+  }
+
+  .md\:h-screen {
+    @media (width >= 48rem) {
+      & {
+        height: 100vh;
+      }
+    }
+  }
+
+  .md\:w-\[30vw\] {
+    @media (width >= 48rem) {
+      & {
+        width: 30vw;
+      }
+    }
+  }
+
+  .md\:w-\[45vw\] {
+    @media (width >= 48rem) {
+      & {
+        width: 45vw;
+      }
+    }
+  }
+
+  .md\:flex-nowrap {
+    @media (width >= 48rem) {
+      & {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  .md\:p-0 {
+    @media (width >= 48rem) {
+      & {
+        padding: calc(var(--spacing) * 0);
+      }
+    }
+  }
+
+  .md\:px-\[5vw\] {
+    @media (width >= 48rem) {
+      & {
+        padding-inline: 5vw;
+      }
+    }
+  }
+
+  .md\:text-left {
+    @media (width >= 48rem) {
+      & {
+        text-align: left;
       }
     }
   }
@@ -1236,10 +1376,6 @@ body {
   margin: auto;
 }
 
-.h {
-  height: 100vh;
-}
-
 #front {
   background-position: bottom;
   background-repeat: no-repeat;
@@ -1323,11 +1459,6 @@ div.arrow {
   }
 }
 
-.page {
-  background-color: var(--color-bg);
-  padding: 15vh;
-}
-
 .history p {
   text-align: left;
   margin: 0;
@@ -1342,18 +1473,8 @@ div.arrow {
   opacity: 1;
 }
 
-.history {
-  margin-left: 5vw;
-}
-
 .flex {
   display: flex;
-}
-
-.histi {
-  color: var(--word);
-  margin: 0;
-  font-size: 5vh;
 }
 
 .line {
@@ -1554,16 +1675,6 @@ nav ul li a.active {
   height: 100%;
 }
 
-.cll {
-  text-align: center;
-  margin: auto;
-}
-
-.sky {
-  border-radius: 5vw;
-  width: 30vw;
-}
-
 .goalll {
   width: 60vw;
   margin-left: 15vw;
@@ -1599,10 +1710,6 @@ nav ul li a.active {
     flex-flow: column wrap;
   }
 
-  .flex {
-    display: block;
-  }
-
   .introd, .m {
     height: auto;
   }
@@ -1610,10 +1717,6 @@ nav ul li a.active {
   .g {
     width: 90%;
     height: auto;
-  }
-
-  .page {
-    padding: 0;
   }
 
   .first {
@@ -1645,14 +1748,9 @@ nav ul li a.active {
     margin-bottom: 0%;
   }
 
-  .sky {
-    width: 60vw;
-  }
-
   .goalll {
     width: 90vw;
-    margin: 0;
-    font-size: 3vh;
+    margin: auto;
   }
 }
 

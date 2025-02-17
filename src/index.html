@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,7 @@
         </ul>
     </nav> 
     <div class="z-9999 md:z-0 block md:hidden fixed w-fit p-2 cursor-default top-0 bg-blue-500" id="mobilemenuBtn" onclick="togglemobileSidebar()">☰</div>
+
     <div class="sidebar" id="sidebar">
         <div class="link">
             <a href="#front">首頁</a>
@@ -32,7 +33,7 @@
             <a href="declaration.html">獨立宣言</a>
         </div>
     </div>
-    <section id="front" class="h bg-[url(img/light.jpg)] bg-cover">
+    <section id="front" class="h-[70vh] md:h-screen bg-[url(img/light.jpg)] bg-cover">
         <div class="none"></div>
         <div class="first backdrop-blur-lg">
             <div class="text-black text-center">
@@ -40,7 +41,7 @@
             </div>
             <div class="flex flex-nowrap flex-row items-center justify-evenly">
                 <hr class="hidden md:block w-5/16 h-1 bg-black">
-                <img src="img/334.webp" alt="CNMC club logo" class="m-auto size-15">
+                <img src="img/334.webp" alt="CNMC club logo" class="m-auto md:m-0 size-15">
                 <hr class="hidden md:block w-5/16 h-1 bg-black">
             </div>
             <p class="pb-[5vh] text-word">原為服務性質社團，隨資通安全管理法規範，失去伺服器存取權，現轉型為學術性質社團，專注培育資通訊人才，發展多元方向。</p>
@@ -50,36 +51,39 @@
             <div class="none2"></div>
         </div>
     </section>
-    <section id="intro" class="page">
+    <section id="intro" class="bg-bg md:px-[5vw] py-[5vh] w-full h-full">
         <div>
-            <p class="histi">社團簡介
-            </p>
+            <h2 class="text-word text-5xl text-center md:text-left my-3">社團簡介
+            </h2>
             <div class="line"></div>
-            <p class="w-[45vw] text-3xl text-word">
+            <p class="p-3 md:p-0 text-center md:text-left md:w-[45vw] text-3xl text-word">
                 校園網路管理小組，簡稱網管小組、CNMC，本社原為服務性質之社團，後隨資通安全管理法之制定，本社失去對學校伺服器的存取權，現轉型成（類）學術性質社團，主要培育優秀資通訊人才，社團朝多元方向發展，不侷限於單一主題或程式語言。
             </p>
         </div>
-        <img src="img/社徽.svg" alt="" class="w-[30vw] ml-auto">
+        <img src="img/社徽.svg" alt="網管小組社徽" class="w-[30vw] m-auto md:ml-auto">
     </section>
-    <section id="history1" class="page">
+    <section id="history1" class="bg-bg md:px-[5vw] py-[5vh]">
         <!-- <div class="comparetext"><div class="comparetitle">網管走入半甲子</div><div class="comparetext"></div></div> -->
         <div class="c-compare" style="--value:50%;">
-            <img class="c-compare__left" src="img/old.jpg" alt="Color" />
-            <img class="c-compare__right" src="img/new.jpg" alt="B/W" />
+            <img class="c-compare__left" src="img/old.jpg" alt="過去上課情形" />
+            <img class="c-compare__right" src="img/new.jpg" alt="現在上課情形" />
             <input type="range" class="c-rng c-compare__range" min="0" max="100" value="50"
                 oninput="this.parentNode.style.setProperty('--value', `${this.value}%`)" />
         </div>
     </section>
-    <section id="history" class="page flex">
-        <img src="img/history.jpg" alt="" class="w-[30vw] rounded-[5vw]">
+    <section id="history" class="bg-bg md:px-[5vw] py-[5vh] flex">
+        <img src="img/history.jpg" 
+        alt="歷屆社服" 
+        class="w-[70vw] h-[15vh] md:w-[30vw] md:h-auto rounded-3xl object-cover m-auto">
+   
         <div class="history">
-            <p class="histi">社團歷史</p>
+            <h2 class="text-word text-5xl text-center md:text-left my-3">社團歷史</h2>
             <div class="line"></div>
-            <p class="w-[45vw] text-3xl text-word">師大附中網管小組於1995年成立，至今已邁入第三十屆。</p>
+            <p class="p-3 md:p-0 text-center md:text-left md:w-[45vw] text-3xl text-word md:ml-5 mx-0">師大附中網管小組於1995年成立，至今已邁入第三十屆。</p>
         </div>
     </section>
-    <section id="class" class="page">
-        <p class="histi cll text-center text-2xl font-bold">社課內容</p>
+    <section id="class" class="bg-bg md:px-[5vw] py-[5vh]">
+        <h2 class="text-word text-5xl text-center mb-4">社課內容</h2>
         <div class="line my-4 border-b-2 border-gray-300"></div>
 
         <!-- Slider Container -->
@@ -93,7 +97,7 @@
 
             <!-- Scrollable Content with Mouse Drag -->
             <div
-                class="slider items-start flex gap-6 overflow-x-auto scroll-smooth px-4 py-2 no-scrollbar cursor-grab active:cursor-grabbing select-none">
+                class="slider items-start flex flex-row flex-nowrap gap-6 overflow-x-auto scroll-smooth px-4 py-2 no-scrollbar cursor-grab active:cursor-grabbing select-none">
                 <div class="g min-w-[300px] flex-none bg-gray-100 p-6 rounded-lg shadow-md mt-0">
                     <div class="bg-[url(img/network.jpg)] p-16 rounded-lg mb-2">
                         <h3 class="clti text-lg font-bold  bg-white/30 backdrop-blur-[4px] rounded-lg">
@@ -188,12 +192,12 @@
         }
     </script>
 
-    <section id="goal" class="page flex">
-        <img src="img/bsky.jpg" alt="" class="sky">
-        <div class="left goalll">
-            <p class="histi">發展方向</p>
+    <section id="goal" class="bg-bg md:px-[5vw] py-[5vh] flex flex-wrap md:flex-nowrap">
+        <img src="img/bsky.jpg" alt="天空" class="w-[70vw] h-[15vh] md:w-[30vw] md:h-auto rounded-3xl object-cover m-auto">
+        <div class="left goalll ">
+            <h2 class="text-word text-5xl text-center md:text-left my-3">發展方向</h2>
             <div class="line"></div>
-            <p class="w-[45vw] text-3xl text-word">
+            <p class="p-3 md:p-0 text-center md:text-left md:w-[45vw] text-3xl text-word">
                 本社目前教學與實作並重，上學期主要以教授課程為主，下學期則會分組上課，目前共有五組，每組均會包含教學與實做，實做的成果將在靜態展展出，敬請期待。
             </p>
         </div>
