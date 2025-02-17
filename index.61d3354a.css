@@ -725,10 +725,6 @@
     height: calc(var(--spacing) * 1);
   }
 
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-
   .w-5\/16 {
     width: 31.25%;
   }
