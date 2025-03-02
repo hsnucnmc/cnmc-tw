@@ -191,18 +191,6 @@ body {
     padding-bottom: 5vh;
 }
 
-.none {
-    margin: 0;
-    height: 15vh;
-    width: 100vw;
-}
-
-.none2 {
-    margin: 0;
-    height: 5vh;
-    width: 100vw;
-}
-
 .down {
     border: none;
     border-radius: 1rem;

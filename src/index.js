@@ -6,7 +6,7 @@ function toggleSidebar() {
         sidebar.style.left = '-18vw';//隱藏
     }
 }
-function togglemobileSidebar(){
+function togglemobileSidebar() {
     const sidebar = document.querySelector('.sidebar');
     if (sidebar.style.left != '0px') {
         sidebar.style.left = '0px'; //顯示
@@ -15,41 +15,43 @@ function togglemobileSidebar(){
         sidebar.style.left = '-100vw';//隱藏
         document.getElementById("mobilemenuBtn").innerText = "☰";
     }
-    
+
 }
 window.toggleSidebar = toggleSidebar;
 window.togglemobileSidebar = togglemobileSidebar;
-document.addEventListener('DOMContentLoaded', () => {
-    // const pElements = document.querySelectorAll('.history p');
+if (window.screen.width >= 768) {
+    document.addEventListener('DOMContentLoaded', () => {
+        // const pElements = document.querySelectorAll('.history p');
 
-    // pElements.forEach((p) => {
-    //     p.addEventListener('mouseenter', () => {
-    //         pElements.forEach((otherp) => {
-    //             if (otherp !== p) {
-    //                 otherp.classList.add('dimmed'); // 其他元素變暗
-    //             }
-    //         });
-    //     });
+        // pElements.forEach((p) => {
+        //     p.addEventListener('mouseenter', () => {
+        //         pElements.forEach((otherp) => {
+        //             if (otherp !== p) {
+        //                 otherp.classList.add('dimmed'); // 其他元素變暗
+        //             }
+        //         });
+        //     });
 
-    //     p.addEventListener('mouseleave', () => {
-    //         pElements.forEach((otherp) => {
-    //             otherp.classList.remove('dimmed'); // 恢復正常
-    //         });
-    //     });
-    // });
-    const sidebar = document.getElementById('sidebar');
-    // Function to close the menu if clicked outside
-    document.addEventListener("click", (e) => {
-        // Check if the clicked element is not the menu or button
-        if (sidebar.style.left != '-100vw' && !sidebar.contains(e.target) && e.target !== document.getElementById("menuBtn") && e.target !== document.getElementById("mobilemenuBtn")) {
-            if(window.screen.width >= 768){
-                sidebar.style.left = '-100vw';
-            }else{
-            sidebar.style.left = '-18vw';
+        //     p.addEventListener('mouseleave', () => {
+        //         pElements.forEach((otherp) => {
+        //             otherp.classList.remove('dimmed'); // 恢復正常
+        //         });
+        //     });
+        // });
+        const sidebar = document.getElementById('sidebar');
+        // Function to close the menu if clicked outside
+        document.addEventListener("click", (e) => {
+            // Check if the clicked element is not the menu or button
+            if (sidebar.style.left != '-100vw' && !sidebar.contains(e.target) && e.target !== document.getElementById("menuBtn") && e.target !== document.getElementById("mobilemenuBtn")) {
+                if (window.screen.width >= 768) {
+                    sidebar.style.left = '-100vw';
+                } else {
+                    sidebar.style.left = '-18vw';
+                }
             }
-        }
+        });
     });
-});
+}
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section"); // Change if needed
     const navLinks = document.querySelectorAll("nav ul li a");
