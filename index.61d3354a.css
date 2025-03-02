@@ -631,6 +631,10 @@
     position: relative;
   }
 
+  .static {
+    position: static;
+  }
+
   .sticky {
     position: sticky;
   }
@@ -749,12 +753,16 @@
     height: 15vh;
   }
 
-  .h-\[70vh\] {
-    height: 70vh;
-  }
-
   .h-full {
     height: 100%;
+  }
+
+  .h-screen {
+    height: 100vh;
+  }
+
+  .min-h-fit {
+    min-height: fit-content;
   }
 
   .w-5 {
@@ -853,6 +861,10 @@
 
   .overflow-x-auto {
     overflow-x: auto;
+  }
+
+  .overflow-x-hidden {
+    overflow-x: hidden;
   }
 
   .scroll-smooth {
@@ -975,6 +987,14 @@
 
   .py-\[5vh\] {
     padding-block: 5vh;
+  }
+
+  .py-\[20\%\] {
+    padding-block: 20%;
+  }
+
+  .pt-\[10\%\] {
+    padding-top: 10%;
   }
 
   .pb-\[5vh\] {
@@ -1219,6 +1239,22 @@
     }
   }
 
+  .md\:py-\[5\%\] {
+    @media (width >= 48rem) {
+      & {
+        padding-block: 5%;
+      }
+    }
+  }
+
+  .md\:pt-\[5\%\] {
+    @media (width >= 48rem) {
+      & {
+        padding-top: 5%;
+      }
+    }
+  }
+
   .md\:text-left {
     @media (width >= 48rem) {
       & {
@@ -1398,18 +1434,6 @@ body {
 
 .int {
   padding-bottom: 5vh;
-}
-
-.none {
-  width: 100vw;
-  height: 15vh;
-  margin: 0;
-}
-
-.none2 {
-  width: 100vw;
-  height: 5vh;
-  margin: 0;
 }
 
 .down {

@@ -15,7 +15,7 @@ function togglemobileSidebar() {
 }
 window.toggleSidebar = toggleSidebar;
 window.togglemobileSidebar = togglemobileSidebar;
-document.addEventListener('DOMContentLoaded', ()=>{
+if (window.screen.width >= 768) document.addEventListener('DOMContentLoaded', ()=>{
     // const pElements = document.querySelectorAll('.history p');
     // pElements.forEach((p) => {
     //     p.addEventListener('mouseenter', () => {
