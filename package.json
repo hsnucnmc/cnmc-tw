@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy-estate": "copyfiles -u 1 'src/estate/*' dist/",
     "build": "npx parcel build src/index.html && npm run copy-estate",
