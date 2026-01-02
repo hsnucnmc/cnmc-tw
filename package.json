@@ -1,0 +1,27 @@
+{
+  "name": "version2",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-estate": "copyfiles -u 1 'src/estate/*' dist/",
+    "build": "npx parcel build src/index.html && npm run copy-estate",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.6",
+    "parcel": "^2.16.3",
+    "sqlite3": "^5.1.7",
+    "tailwindcss": "^4.0.6"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "gh-pages": "^6.3.0",
+    "svgo": "^3.3.2"
+  }
+}
