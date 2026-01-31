@@ -317,7 +317,8 @@ nav {
     color: aliceblue;
     background-color: #00274D;
     cursor: default;
-    position: sticky;
+    /* position: sticky; */
+    position: fixed;
     top: 0;
     z-index: 1000;
     flex-wrap: nowrap;
